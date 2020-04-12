@@ -6,8 +6,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  GlobalKey<ScaffoldState> _scaffoldKey = new GlobalObjectKey<ScaffoldState>('HomeScreen');
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          leading: Container(),
+        ),
+        key: _scaffoldKey,
+        body: Placeholder(),
+      ),
+    );
   }
 }

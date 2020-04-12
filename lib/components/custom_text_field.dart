@@ -56,17 +56,14 @@ class AppTextFormField extends StatelessWidget {
           hintStyle: TextStyles.labelStyle,
           errorStyle: TextStyles.errorStyle,
           prefixText: prefixText,
-          errorMaxLines: 1,
+          errorMaxLines: 15,
           contentPadding: EdgeInsets.zero,
           border: InputBorder.none,
         ),
 //        textAlign: TextAlign.center,
         inputFormatters: (maxLength != null)
             ? obscureText
-                ? [
-                    LengthLimitingTextInputFormatter(maxLength),
-                    WhitelistingTextInputFormatter(RegExp("[0-9]"))
-                  ]
+                ? [LengthLimitingTextInputFormatter(maxLength), WhitelistingTextInputFormatter(RegExp("[0-9]"))]
                 : [LengthLimitingTextInputFormatter(maxLength)]
             : [],
         onSaved: onSaved,

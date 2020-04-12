@@ -9,17 +9,19 @@ import 'package:flutter_custom_error_screen/utils/strings.dart';
 import 'package:flutter_custom_error_screen/utils/text_styles.dart';
 import 'package:flutter_custom_error_screen/utils/validator.dart';
 
+import '../../utils/routes.dart';
+import '../home/home_screen.dart';
+
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  GlobalKey<ScaffoldState> _scaffoldKey =
-      new GlobalObjectKey<ScaffoldState>('LoginScreen');
+  GlobalKey<ScaffoldState> _scaffoldKey = new GlobalObjectKey<ScaffoldState>('LoginScreen');
 
-  String _email = "";
-  String _password = "";
+  String _email = "ajay.kumar@nonstopio.com";
+  String _password = "Non5t@p";
 
   final _formKey = GlobalKey<FormState>();
 
@@ -41,10 +43,12 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   _login() {
-    if (!isFormValid(_formKey)) return;
-    setFocus(context);
     appLogs('_email : $_email');
     appLogs('_password : $_password');
+    if (!isFormValid(_formKey)) return;
+    setFocus(context);
+
+    AppRoutes.push(context, HomeScreen());
   }
 
   @override
@@ -74,16 +78,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: Sizes.s20,
               ),
               Container(
-                padding: EdgeInsets.symmetric(
-                    vertical: Sizes.s5, horizontal: Sizes.s40),
+                padding: EdgeInsets.symmetric(vertical: Sizes.s5, horizontal: Sizes.s40),
                 child: Text(
                   AppStrings.loginTitle,
                   style: TextStyles.loginTitle,
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(
-                    vertical: Sizes.s10, horizontal: Sizes.s40),
+                padding: EdgeInsets.symmetric(vertical: Sizes.s10, horizontal: Sizes.s40),
                 child: Text(
                   AppStrings.loginSubTitle,
                   style: TextStyles.loginSubTitle,
@@ -104,8 +106,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   textInputAction: TextInputAction.next,
                   icon: Icons.email,
                   onSaved: (value) => _email = value.trim(),
-                  onFieldSubmitted: (_) =>
-                      setFocus(context, focusNode: _passwordFocusNode),
+                  onFieldSubmitted: (_) => setFocus(context, focusNode: _passwordFocusNode),
+                  initialValue: _email,
                 ),
               ),
               Container(
@@ -125,6 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   obscureText: true,
                   onSaved: (value) => _password = value.trim(),
                   onFieldSubmitted: (_) => _login(),
+                  initialValue: _password,
                 ),
               ),
               Container(

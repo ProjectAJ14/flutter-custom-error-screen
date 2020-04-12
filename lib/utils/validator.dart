@@ -22,7 +22,7 @@ class FieldValidator {
   /// no more than 8 characters, and must include at least one upper case letter,
   /// one lower case letter, and one numeric digit.
   static String validatePassword(String value) {
-    print("validateEmail : $value ");
+    print("validatePassword : $value ");
 
     if (value.isEmpty) return AppStrings.enterPassword;
 

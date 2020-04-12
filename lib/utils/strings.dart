@@ -13,7 +13,8 @@ class AppStrings {
 
   static const String enterPassword = "Enter Password";
 
-  static const String enterValidPassword = "Enter Valid Password";
+  static const String enterValidPassword =
+      "Password must be at least 4 characters, no more than 8 characters, and must include at least one upper case letter,one lower case letter, and one numeric digit";
 
   static const String loginTitle = "Welcome!";
 
@@ -23,8 +24,7 @@ class AppStrings {
 
   static const String otpSubTitle = "Your phone number";
 
-  static const String enterOTPMessage =
-      "Enter the 4 digit code sent to your phone";
+  static const String enterOTPMessage = "Enter the 4 digit code sent to your phone";
 
   static const String resendOTPMessage = "I have a problem. Resend OTP";
 

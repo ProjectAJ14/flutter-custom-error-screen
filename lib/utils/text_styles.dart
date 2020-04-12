@@ -56,7 +56,6 @@ class TextStyles {
         color: Colors.black,
         inherit: false,
         textBaseline: TextBaseline.alphabetic,
-        letterSpacing: 3.0,
       );
 
   static TextStyle get labelStyle => TextStyle(
