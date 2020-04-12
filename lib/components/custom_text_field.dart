@@ -44,7 +44,7 @@ class AppTextFormField extends StatelessWidget {
             color: AppColors.primary,
           ),
           borderRadius: BorderRadius.all(Radius.circular(Sizes.s5))),
-      padding: EdgeInsets.all(Sizes.s8),
+      padding: EdgeInsets.symmetric(horizontal: Sizes.s10),
       child: TextFormField(
         focusNode: focusNode,
         decoration: InputDecoration(
@@ -63,7 +63,10 @@ class AppTextFormField extends StatelessWidget {
 //        textAlign: TextAlign.center,
         inputFormatters: (maxLength != null)
             ? obscureText
-                ? [LengthLimitingTextInputFormatter(maxLength), WhitelistingTextInputFormatter(RegExp("[0-9]"))]
+                ? [
+                    LengthLimitingTextInputFormatter(maxLength),
+                    WhitelistingTextInputFormatter(RegExp("[0-9]"))
+                  ]
                 : [LengthLimitingTextInputFormatter(maxLength)]
             : [],
         onSaved: onSaved,
