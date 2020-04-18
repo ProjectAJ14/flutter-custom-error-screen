@@ -9,14 +9,12 @@ class AppLogoWidget extends StatelessWidget {
   final EdgeInsetsGeometry margin;
   final EdgeInsetsGeometry padding;
 
-  const AppLogoWidget(
-      {Key key, this.margin, this.padding, this.size, this.image})
-      : super(key: key);
+  const AppLogoWidget({Key key, this.margin, this.padding, this.size, this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Hero(
-      tag: AppStrings.appName,
+      tag: Strings.appName,
       child: Container(
         margin: margin ?? EdgeInsets.zero,
         padding: padding ?? EdgeInsets.all(Sizes.s10),

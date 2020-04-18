@@ -4,7 +4,7 @@ class AppLabels {
   static const String Login = "Login";
 }
 
-class AppStrings {
+class Strings {
   static const String appName = "NONSTOP IO TECHNOLOGIES";
 
   static const String enterEmail = "Enter Email";
@@ -29,4 +29,11 @@ class AppStrings {
   static const String resendOTPMessage = "I have a problem. Resend OTP";
 
   static const String resendOTP = "Resend OTP";
+  static const String restartApp = "Restart App";
+
+  static const String crashFinalTitle = "Abnormal Behavior!";
+  static const String crashFinalMessage =
+      "It looks like the App is behaving abnormally, and will exit now. We have notified our engineering team about it, and you should get an update soon.\nWe apologize for the inconvenience caused.";
+  static const String timeOutErrorMessage =
+      "Timeout !\n Please check if you have good internet connection!\n Try Again";
 }

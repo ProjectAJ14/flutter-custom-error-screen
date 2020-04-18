@@ -4,7 +4,7 @@ class FieldValidator {
   static String validateEmail(String value) {
     print("validateEmail : $value ");
 
-    if (value.isEmpty) return AppStrings.enterEmail;
+    if (value.isEmpty) return Strings.enterEmail;
 
     Pattern pattern =
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
@@ -12,7 +12,7 @@ class FieldValidator {
     RegExp regex = new RegExp(pattern);
 
     if (!regex.hasMatch(value.trim())) {
-      return AppStrings.enterValidEmail;
+      return Strings.enterValidEmail;
     }
 
     return null;
@@ -24,14 +24,14 @@ class FieldValidator {
   static String validatePassword(String value) {
     print("validatePassword : $value ");
 
-    if (value.isEmpty) return AppStrings.enterPassword;
+    if (value.isEmpty) return Strings.enterPassword;
 
     Pattern pattern = r'^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$';
 
     RegExp regex = new RegExp(pattern);
 
     if (!regex.hasMatch(value.trim())) {
-      return AppStrings.enterValidPassword;
+      return Strings.enterValidPassword;
     }
 
     return null;

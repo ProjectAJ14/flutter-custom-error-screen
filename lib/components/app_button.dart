@@ -4,7 +4,7 @@ import 'package:flutter_custom_error_screen/utils/sizes.dart';
 import 'package:flutter_custom_error_screen/utils/text_styles.dart';
 
 class AppButton extends StatelessWidget {
-  final GestureTapCallback onTap;
+  final Function onTap;
   final String text;
   final BorderRadius _borderRadius = BorderRadius.all(
     Radius.circular(Sizes.s5),

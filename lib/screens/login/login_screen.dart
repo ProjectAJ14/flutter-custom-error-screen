@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: Sizes.s40),
                 child: Text(
-                  AppStrings.appName,
+                  Strings.appName,
                   style: TextStyles.appName,
                   textAlign: TextAlign.center,
                 ),
@@ -80,14 +80,14 @@ class _LoginScreenState extends State<LoginScreen> {
               Container(
                 padding: EdgeInsets.symmetric(vertical: Sizes.s5, horizontal: Sizes.s40),
                 child: Text(
-                  AppStrings.loginTitle,
+                  Strings.loginTitle,
                   style: TextStyles.loginTitle,
                 ),
               ),
               Container(
                 padding: EdgeInsets.symmetric(vertical: Sizes.s10, horizontal: Sizes.s40),
                 child: Text(
-                  AppStrings.loginSubTitle,
+                  Strings.loginSubTitle,
                   style: TextStyles.loginSubTitle,
                 ),
               ),

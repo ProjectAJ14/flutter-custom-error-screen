@@ -50,6 +50,22 @@ class TextStyles {
         inherit: false,
       );
 
+  static TextStyle get defaultBold => TextStyle(
+        fontFamily: FontFamily.bold,
+        fontSize: FontSize.s16,
+        color: Colors.black,
+        inherit: false,
+        textBaseline: TextBaseline.alphabetic,
+        fontWeight: FontWeight.bold,
+      );
+
+  static TextStyle get defaultRegular => TextStyle(
+        fontFamily: FontFamily.regular,
+        fontSize: FontSize.s16,
+        color: Colors.black,
+        inherit: false,
+        textBaseline: TextBaseline.alphabetic,
+      );
   static TextStyle get editText => TextStyle(
         fontFamily: FontFamily.regular,
         fontSize: FontSize.s16,
